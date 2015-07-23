@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TAP\Bundle\TapAppBundle\Entity\Profile" table="profile">
+    <id name="profileKey" type="integer" column="profile_key">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userId" type="string" column="user_id" length="255" nullable="false"/>
+    <field name="firstName" type="string" column="first_name" length="30" nullable="true"/>
+    <field name="lastName" type="string" column="last_name" length="30" nullable="true"/>
+    <field name="facebookUid" type="string" column="facebook_uid" length="20" nullable="true"/>
+    <field name="emailHash" type="string" column="email_hash" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

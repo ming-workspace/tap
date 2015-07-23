@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TAP\Bundle\TapAppBundle\Entity\User" table="user">
+    <unique-constraints>
+      <unique-constraint name="UNIQ_8D93D64992FC23A8" columns="username_canonical"/>
+      <unique-constraint name="UNIQ_8D93D649A0D96FBF" columns="email_canonical"/>
+    </unique-constraints>
+    <id name="userKey" type="integer" column="user_key">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="status" type="boolean" column="status" nullable="false"/>
+    <field name="facebookId" type="string" column="facebook_id" length="255" nullable="false"/>
+    <field name="facebookAccessToken" type="string" column="facebook_access_token" length="255" nullable="false"/>
+    <field name="balance" type="float" column="balance" precision="20" scale="2" nullable="true"/>
+    <field name="credits" type="float" column="credits" precision="20" scale="2" nullable="true"/>
+    <field name="serviceType" type="text" column="service_type" nullable="true"/>
+    <field name="responseTime" type="string" column="response_time" nullable="true"/>
+    <field name="createTime" type="datetime" column="create_time" nullable="true"/>
+    <field name="updateTime" type="datetime" column="update_time" nullable="true"/>
+    <field name="deleteTime" type="datetime" column="delete_time" nullable="true"/>
+    <field name="username" type="string" column="username" length="255" nullable="false"/>
+    <field name="usernameCanonical" type="string" column="username_canonical" length="255" nullable="false"/>
+    <field name="emailCanonical" type="string" column="email_canonical" length="255" nullable="false"/>
+    <field name="enabled" type="boolean" column="enabled" nullable="false"/>
+    <field name="salt" type="string" column="salt" length="255" nullable="false"/>
+    <field name="password" type="string" column="password" length="255" nullable="false"/>
+    <field name="lastLogin" type="datetime" column="last_login" nullable="true"/>
+    <field name="locked" type="boolean" column="locked" nullable="false"/>
+    <field name="expired" type="boolean" column="expired" nullable="false"/>
+    <field name="expiresAt" type="datetime" column="expires_at" nullable="true"/>
+    <field name="confirmationToken" type="string" column="confirmation_token" length="255" nullable="true"/>
+    <field name="passwordRequestedAt" type="datetime" column="password_requested_at" nullable="true"/>
+    <field name="roles" type="array" column="roles" nullable="false"/>
+    <field name="credentialsExpired" type="boolean" column="credentials_expired" nullable="false"/>
+    <field name="credentialsExpireAt" type="datetime" column="credentials_expire_at" nullable="true"/>
+  </entity>
+</doctrine-mapping>

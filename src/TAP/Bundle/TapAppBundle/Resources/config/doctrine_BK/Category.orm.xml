@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TAP\Bundle\TapAppBundle\Entity\Category" table="category">
+    <id name="categoryKey" type="integer" column="category_key">
+    </id>
+    <field name="status" type="boolean" column="status" nullable="true"/>
+    <field name="title" type="string" column="title" length="255" nullable="true"/>
+    <field name="description" type="text" column="description" nullable="true"/>
+    <field name="createTime" type="datetime" column="create_time" nullable="true"/>
+    <field name="updateTime" type="datetime" column="update_time" nullable="true"/>
+    <field name="deleteTime" type="datetime" column="delete_time" nullable="true"/>
+  </entity>
+</doctrine-mapping>
